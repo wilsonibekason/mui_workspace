@@ -20,7 +20,7 @@ const Sidebar = () => {
     setOpen(!open);
   }
   return (
-    <Box bgcolor={'skyblue'}  p={2} flex={1} sx={{display: {xs: 'none', sm: 'block'}}}>
+    <Box bgcolor={'white'}  p={2} flex={1} sx={{display: {xs: 'none', sm: 'block'}}}>
       <List
       subheader={
        <ListSubheader component="div" id="nested-list-subheader">
@@ -29,6 +29,30 @@ const Sidebar = () => {
       } 
        
       >
+        <ListItemButton>
+        <ListItemIcon>
+          <SendIcon />
+        </ListItemIcon>
+        <ListItemText primary="Sent mail" />
+      </ListItemButton>
+      <ListItemButton>
+        <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon>
+        <ListItemText primary="Drafts" />
+      </ListItemButton>
+        <ListItemButton>
+        <ListItemIcon>
+          <SendIcon />
+        </ListItemIcon>
+        <ListItemText primary="Sent mail" />
+      </ListItemButton>
+      <ListItemButton>
+        <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon>
+        <ListItemText primary="Drafts" />
+      </ListItemButton>
         <ListItemButton>
         <ListItemIcon>
           <SendIcon />
