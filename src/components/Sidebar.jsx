@@ -21,12 +21,13 @@ const Sidebar = () => {
   }
   return (
     <Box bgcolor={'white'}  p={2} flex={1} sx={{display: {xs: 'none', sm: 'block'}}}>
+      <Box position='fixed'>
       <List
-      subheader={
-       <ListSubheader component="div" id="nested-list-subheader">
-       Nested List Items
-     </ListSubheader>
-      } 
+    //   subheader={
+    //    <ListSubheader component="div" id="nested-list-subheader">
+    //    Nested List Items
+    //  </ListSubheader>
+    //   } 
        
       >
         <ListItemButton>
@@ -91,6 +92,8 @@ const Sidebar = () => {
         </List>
       </Collapse>
       </List>
+      </Box>
+     
     </Box>
   )
 }
