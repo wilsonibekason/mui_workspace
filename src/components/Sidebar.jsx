@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Switch } from '@mui/material'
 import React from 'react'
 import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
@@ -14,13 +14,13 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder'
 
 
-const Sidebar = () => {
+const Sidebar = ({mode, setMode}) => {
   const [open, setOpen] =  React.useState(true);
   const handleClick = () => {
     setOpen(!open);
   }
   return (
-    <Box bgcolor={'white'}  p={2} flex={1} sx={{display: {xs: 'none', sm: 'block'}}}>
+    <Box  p={2} flex={1} sx={{display: {xs: 'none', sm: 'block'}}}>
       <Box position='fixed'>
       <List
     //   subheader={
@@ -53,6 +53,9 @@ const Sidebar = () => {
           <DraftsIcon />
         </ListItemIcon>
         <ListItemText primary="Drafts" />
+      </ListItemButton>
+      <ListItemButton>
+        <Switch  onClick={(e) => setMode(mode === 'light' ? 'dark' : 'light')}/>
       </ListItemButton>
         <ListItemButton>
         <ListItemIcon>

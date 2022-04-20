@@ -1,14 +1,14 @@
 import React from 'react'
-import {Tooltip} from '@mui/material'
-import {IconButton, DeleteIcon}from '@mui/icons-material';
+import {Tooltip, Fab} from '@mui/material'
+import { Add as AddIcon}from '@mui/icons-material';
 
 const Add = () => {
   return (
    <>
-   <Tooltip title="Delete">
-  <IconButton>
-    <DeleteIcon />
-  </IconButton>
+   <Tooltip title="Delete" sx={{position: 'fixed', bottom: 20,  left: {xs: "calc(50%) -25px", md: 30} }}>
+   <Fab color="primary" aria-label="add">
+       <AddIcon />
+    </Fab>
 </Tooltip>
    </>
   )
