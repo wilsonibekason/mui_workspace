@@ -14,9 +14,13 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 
 
 const Sidebar = () => {
+  const [open, setOpen] =  React.useState(true);
+  const handleClick = () => {
+    setOpen(!open);
+  }
   return (
     <Box bgcolor={'skyblue'}  p={2} flex={1} sx={{display: {xs: 'none', sm: 'block'}}}>
-       sjjjsj
+       
     </Box>
   )
 }
